@@ -1,5 +1,13 @@
 spring:
   application:
     name: config-service
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/azat111/city-events-config
+          clone-on-start: true
 server:
   port: 8888
